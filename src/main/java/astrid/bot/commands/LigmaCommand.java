@@ -6,6 +6,7 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
 import java.util.Random;
 
 public class LigmaCommand implements ISlashCommand {
+
     @Override
     public String getName() {
         return "ligma";
@@ -20,7 +21,7 @@ public class LigmaCommand implements ISlashCommand {
     public boolean execute(SlashCommandInteractionEvent event) {
         int random = new Random().nextInt(3);
         switch (random) {
-            case 1 -> event.reply("ligma balls").setEphemeral(true).queue();
+            case 1 -> event.reply("steve jobs").setEphemeral(true).queue();
             case 2 -> event.reply("joe mamaaa").setEphemeral(true).queue();
         }
         return true;

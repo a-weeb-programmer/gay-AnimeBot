@@ -11,17 +11,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface ISlashCommand {
+
+    /**
+     * Registration for commands, pwease don't override or call this method anywhere else
+     * */
     default void register(CommandListUpdateAction list) {
         list.addCommands(Commands.slash(getName(), getDescription())
                 .addOptions(getOptionData())
                 .setDefaultPermissions(getDefaultMemberPermissions()).
                 addSubcommands(getSubcommandData())).queue();
     }
+
     String getName();
+
     String getDescription();
+
     default List<OptionData> getOptionData() {
         return new ArrayList<>();
     }
+
     default DefaultMemberPermissions getDefaultMemberPermissions() {
         return DefaultMemberPermissions.ENABLED;
     }

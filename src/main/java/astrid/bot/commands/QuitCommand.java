@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuitCommand implements ISlashCommand {
+
     @Override
     public String getName() {
         return "shutdown";

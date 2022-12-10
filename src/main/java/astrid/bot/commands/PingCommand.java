@@ -12,7 +12,7 @@ public class PingCommand implements ISlashCommand {
 
     @Override
     public String getDescription() {
-        return "server ping uwuu";
+        return "server ping uwu";
     }
 
     @Override
